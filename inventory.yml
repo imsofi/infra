@@ -1,0 +1,4 @@
+all:
+  hosts:
+    winter:
+      ansible_host: winter.box.byte.surf

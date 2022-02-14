@@ -1,0 +1,126 @@
+- name: Deploy common services
+  hosts: all
+  roles:
+    - role: common
+    - role: minecraft_systemd
+      vars:
+        minecraft_server_name: prod
+        minecraft_eula: true
+        minecraft_prop_motd: \u00A7eSofi's Minecraft Corner\u00A7n\n\u00A79\u00A7nhttps\://discord.gg/wVpskM4gpb\u00A7r
+        minecraft_prop_difficulty: hard
+        minecraft_prop_view_distance: "12"
+        minecraft_prop_server_port: "25565"
+        minecraft_min_ram: 3G
+        minecraft_max_ram: 3G
+        minecraft_prop_spawn_protection: "0"
+        minecraft_fabric_mods:
+          # Good to have
+          - url: https://github.com/FabricMC/fabric/releases/download/0.46.4%2B1.18/fabric-api-0.46.4+1.18.jar
+            name: fabric-api-0.46.4+1.18.jar
+            checksum: 'sha256:bbc1ac58aabdc735208a2654857e838312aa87ee3e94178cc7790b382c8355a3'
+
+          # Requirement for ledger
+          - url: https://cdn.modrinth.com/data/Ha28R6CL/versions/1.7.1+kotlin.1.6.10/fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar
+            name: fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar
+            checksum: 'sha256:dcd826b83110b9901e3ed8d1ed87a9f4506222038e5ad39ccd1ed349fde34f86'
+
+          # Server side logging mod
+          - url: https://cdn.modrinth.com/data/LVN9ygNV/versions/1.2.2/ledger-1.2.2.jar
+            name: ledger-1.2.2.jar
+            checksum: 'sha256:ce2f3fa53a42b81f4c4f2bb0a7ef70a7fbfe7ea9c6cd73feb7c5f39310da8891'
+
+          # Server optimataztion mod
+          - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.7/lithium-fabric-mc1.18.1-0.7.7.jar
+            name: lithium-fabric-mc1.18.1-0.7.7.jar
+            checksum: 'sha256:c2b319ad5752f1516e230770c52d3083dc14807e8f5ac3dd491356d0a2bc818c'
+
+          # Networking optimataztion mod
+          - url: https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.6/krypton-0.1.6.jar
+            name: krypton-0.1.6.jar
+            checksum: 'sha256:d1c2b12483115279abb1d460d22cb7eefc7f279a3776fa6d735957c2f9da2be6'
+
+          # Lighting optimataztion mod
+          - url: https://cdn.modrinth.com/data/H8CaAYZC/versions/Starlight%201.0.0%201.18.x/starlight-1.0.0+fabric.d0a3220.jar
+            name: starlight-1.0.0+fabric.d0a3220.jar
+            checksum: 'sha256:41d167be9479556351bf187587cfc2e5015db38053d153bab1884158488d692f'
+
+          # Performance profiling
+          - url: https://cdn.modrinth.com/data/l6YH9Als/versions/1.8.6-fabric/spark-1.8.6-fabric.jar
+            name: spark-1.8.6-fabric.jar
+            checksum: 'sha256:046965da7d54e132094f1d32d01ca994ee1ca8b858213435b85c6aef09f70ca3'
+
+          # View and manipulate inventories
+          - url: https://cdn.modrinth.com/data/jrDKjZP7/versions/1.4.8/InvView-1.4.8-1.18+.jar
+            name: InvView-1.4.8-1.18+.jar
+            checksum: 'sha256:518d187c50c064564360dd2718f596940d9fa541838bd6dad78539e490c3f7b4'
+
+          # Add /mods command
+          - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar 
+            name: mods-command-mc1.18-1.0.5.jar
+            checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
+
+          # Permission management
+          - url: https://ci.lucko.me/job/LuckPerms/1410/artifact/fabric/build/libs/LuckPerms-Fabric-5.4.2.jar
+            name: LuckPerms-Fabric-5.4.2.jar
+            checksum: 'sha256:ec965de4c0c26f5cb0248878929d006ba65b142da113b939c14b095da649a570'
+    - role: minecraft
+      vars:
+        minecraft_server_name: staging
+        minecraft_jar: fabric-1.18.1-0.13.1-0.10.2-server.jar
+        minecraft_prop_motd: \u00A7eSofi's Staging Server
+        minecraft_prop_difficulty: hard
+        minecraft_prop_view_distance: "12"
+        minecraft_prop_server_port: "25566"
+        minecraft_min_ram: 2G
+        minecraft_max_ram: 2G
+        minecraft_prop_spawn_protection: "0"
+        minecraft_fabric_mods:
+          # Good to have
+          - url: https://github.com/FabricMC/fabric/releases/download/0.46.4%2B1.18/fabric-api-0.46.4+1.18.jar
+            name: fabric-api-0.46.4+1.18.jar
+            checksum: 'sha256:bbc1ac58aabdc735208a2654857e838312aa87ee3e94178cc7790b382c8355a3'
+
+          # Requirement for ledger
+          - url: https://cdn.modrinth.com/data/Ha28R6CL/versions/1.7.1+kotlin.1.6.10/fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar
+            name: fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar
+            checksum: 'sha256:dcd826b83110b9901e3ed8d1ed87a9f4506222038e5ad39ccd1ed349fde34f86'
+
+          # Server side logging mod
+          - url: https://cdn.modrinth.com/data/LVN9ygNV/versions/1.2.2/ledger-1.2.2.jar
+            name: ledger-1.2.2.jar
+            checksum: 'sha256:ce2f3fa53a42b81f4c4f2bb0a7ef70a7fbfe7ea9c6cd73feb7c5f39310da8891'
+
+          # Server optimataztion mod
+          - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.7/lithium-fabric-mc1.18.1-0.7.7.jar
+            name: lithium-fabric-mc1.18.1-0.7.7.jar
+            checksum: 'sha256:c2b319ad5752f1516e230770c52d3083dc14807e8f5ac3dd491356d0a2bc818c'
+
+          # Networking optimataztion mod
+          - url: https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.6/krypton-0.1.6.jar
+            name: krypton-0.1.6.jar
+            checksum: 'sha256:d1c2b12483115279abb1d460d22cb7eefc7f279a3776fa6d735957c2f9da2be6'
+
+          # Lighting optimataztion mod
+          - url: https://cdn.modrinth.com/data/H8CaAYZC/versions/Starlight%201.0.0%201.18.x/starlight-1.0.0+fabric.d0a3220.jar
+            name: starlight-1.0.0+fabric.d0a3220.jar
+            checksum: 'sha256:41d167be9479556351bf187587cfc2e5015db38053d153bab1884158488d692f'
+
+          # Performance profiling
+          - url: https://cdn.modrinth.com/data/l6YH9Als/versions/1.8.6-fabric/spark-1.8.6-fabric.jar
+            name: spark-1.8.6-fabric.jar
+            checksum: 'sha256:046965da7d54e132094f1d32d01ca994ee1ca8b858213435b85c6aef09f70ca3'
+
+          # View and manipulate inventories
+          - url: https://cdn.modrinth.com/data/jrDKjZP7/versions/1.4.8/InvView-1.4.8-1.18+.jar
+            name: InvView-1.4.8-1.18+.jar
+            checksum: 'sha256:518d187c50c064564360dd2718f596940d9fa541838bd6dad78539e490c3f7b4'
+
+          # Add /mods command
+          - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar 
+            name: mods-command-mc1.18-1.0.5.jar
+            checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
+
+          # Permission management
+          - url: https://ci.lucko.me/job/LuckPerms/1410/artifact/fabric/build/libs/LuckPerms-Fabric-5.4.2.jar
+            name: LuckPerms-Fabric-5.4.2.jar
+            checksum: 'sha256:ec965de4c0c26f5cb0248878929d006ba65b142da113b939c14b095da649a570'
