@@ -1,0 +1,26 @@
+- name: Ensure ufw is installed
+  apt:
+    name: ufw
+    state: present
+  tags:
+    - role::ufw
+
+- name: Allow ssh
+  community.general.ufw:
+    rule: allow
+    name: ssh
+  tags:
+    - role::ufw
+
+- name: Enable ufw and deny all traffic by default
+  community.general.ufw:
+    state: enabled
+    policy: deny
+  tags:
+    - role::ufw
+
+- name: Apply service-specific rules
+  community.general.ufw: "{{ item }}"
+  with_items: "{{ rules }}"
+  tags:
+    - role::ufw
