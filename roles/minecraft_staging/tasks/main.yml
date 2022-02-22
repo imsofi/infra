@@ -1,0 +1,5 @@
+- import_role:
+    name: minecraft_systemd
+  tags:
+    - role::minecraft_staging
+    - never
