@@ -1,0 +1,9 @@
+rules:
+  - comment: "Allow simple-voice-chat in minecraft-prod"
+    port: "24454"
+    rule: allow
+    proto: udp
+  - comment: "Allow minecraft-prod server"
+    port: "25565"
+    rule: allow
+    proto: tcp

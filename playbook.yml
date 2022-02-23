@@ -3,5 +3,4 @@
   roles:
     - role: common
     - role: ufw
-    - role: minecraft_prod
-    - role: minecraft_staging
+    - role: minecraft

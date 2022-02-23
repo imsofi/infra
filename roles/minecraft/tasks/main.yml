@@ -1,0 +1,6 @@
+
+- name: Set up minecraft server
+  import_role:
+    name: minecraft_systemd
+  tags:
+    - role::minecraft
