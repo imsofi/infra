@@ -1,3 +1,4 @@
+---
 minecraft_eula: true
 minecraft_server_name: prod
 minecraft_prop_motd: \u00A7eSofi's Minecraft Corner\u00A7n\n\u00A79\u00A7nhttps\://discord.gg/wVpskM4gpb\u00A7r
@@ -59,7 +60,7 @@ minecraft_fabric_mods:
     checksum: 'sha256:518d187c50c064564360dd2718f596940d9fa541838bd6dad78539e490c3f7b4'
 
   # Add /mods command
-  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar 
+  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar
     name: mods-command-mc1.18-1.0.5.jar
     checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
 

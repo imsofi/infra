@@ -1,3 +1,10 @@
+---
+- name: Ensure java is installed
+  apt:
+    name: openjdk-17-jre-headless
+    state: present
+  tags:
+    - role::minecraft
 
 - name: Set up minecraft server
   import_role:

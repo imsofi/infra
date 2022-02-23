@@ -1,3 +1,4 @@
+---
 - name: Ensure package is installed
   apt:
     name: ufw

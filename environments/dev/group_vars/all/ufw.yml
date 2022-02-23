@@ -1,3 +1,4 @@
+---
 rules:
   - comment: "Allow simple-voice-chat in minecraft-staging"
     port: "24455"

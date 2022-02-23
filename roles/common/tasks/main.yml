@@ -1,3 +1,4 @@
+---
 - name: Update hostname to match Ansible inventory
   hostname:
     name: "{{ inventory_hostname }}"

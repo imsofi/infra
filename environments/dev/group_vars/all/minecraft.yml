@@ -1,3 +1,4 @@
+---
 minecraft_eula: true
 minecraft_server_name: staging
 minecraft_prop_motd: \u00A7eSofi's Staging Server
@@ -57,16 +58,16 @@ minecraft_fabric_mods:
     checksum: 'sha256:518d187c50c064564360dd2718f596940d9fa541838bd6dad78539e490c3f7b4'
 
   # Add /mods command
-  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar 
+  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar
     name: mods-command-mc1.18-1.0.5.jar
     checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
 
-  # Voice chat
-  # - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.1-2.2.21/voicechat-fabric-1.18.1-2.2.21.jar
-  #   name: voicechat-fabric-1.18.1-2.2.21.jar
-  #   checksum: 'sha256:30312d2fcf2ce3a230b05c571b39c022320ef9f9456bfd80b73889bd640f7ff8'
+    # Voice chat
+    # - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.1-2.2.21/voicechat-fabric-1.18.1-2.2.21.jar
+    #   name: voicechat-fabric-1.18.1-2.2.21.jar
+    #   checksum: 'sha256:30312d2fcf2ce3a230b05c571b39c022320ef9f9456bfd80b73889bd640f7ff8'
 
-  # Discord bridge
-  # - url: https://cdn.modrinth.com/data/FCmig1C9/versions/0.10.7/Fabric-Discord-Link-0.10.7.jar
-  #   name: Fabric-Discord-Link-0.10.7.jar
-  #   checksum: 'sha256:920bfd43be9b9773df5575068f3b5147533f8be0c05eb8196879c0f038604944'
+    # Discord bridge
+    # - url: https://cdn.modrinth.com/data/FCmig1C9/versions/0.10.7/Fabric-Discord-Link-0.10.7.jar
+    #   name: Fabric-Discord-Link-0.10.7.jar
+    #   checksum: 'sha256:920bfd43be9b9773df5575068f3b5147533f8be0c05eb8196879c0f038604944'
