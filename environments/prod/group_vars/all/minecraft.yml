@@ -18,6 +18,9 @@ minecraft_fabric_loader_version: 0.13.3
 minecraft_fabric_installer_version: 0.10.2
 minecraft_fabric_checksum: 'sha256:45bcd16bf11c1d2ae9d38601aa6049f3772abaf48ab5a16eb53726e026b4e5e1'
 
+minecraft_mod_voicechat_enable: true
+minecraft_mod_voicechat_port: "24454"
+
 minecraft_fabric_mods:
   # Good to have
   - url: https://github.com/FabricMC/fabric/releases/download/0.46.4%2B1.18/fabric-api-0.46.4+1.18.jar
