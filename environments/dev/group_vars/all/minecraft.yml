@@ -10,11 +10,14 @@ minecraft_prop_spawn_protection: "0"
 
 minecraft_min_ram: 2G
 minecraft_max_ram: 2G
-
+ 
 minecraft_fabric_version: 1.18.1
-minecraft_fabric_loader_version: 0.13.1
+minecraft_fabric_loader_version: 0.13.3
 minecraft_fabric_installer_version: 0.10.2
-minecraft_fabric_checksum: 'sha256:bb30699ddc27bfa1b9dec48398a642605a69068828b4a46de6b9dfc952d4cda2'
+minecraft_fabric_checksum: 'sha256:45bcd16bf11c1d2ae9d38601aa6049f3772abaf48ab5a16eb53726e026b4e5e1'
+
+minecraft_mod_voicechat_enable: true
+minecraft_mod_voicechat_port: "24455"
 
 minecraft_fabric_mods:
   # Good to have
@@ -33,9 +36,9 @@ minecraft_fabric_mods:
     checksum: 'sha256:ce2f3fa53a42b81f4c4f2bb0a7ef70a7fbfe7ea9c6cd73feb7c5f39310da8891'
 
   # Server optimataztion mod
-  - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.7/lithium-fabric-mc1.18.1-0.7.7.jar
-    name: lithium-fabric-mc1.18.1-0.7.7.jar
-    checksum: 'sha256:c2b319ad5752f1516e230770c52d3083dc14807e8f5ac3dd491356d0a2bc818c'
+  - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.8/lithium-fabric-mc1.18.1-0.7.8.jar
+    name: lithium-fabric-mc1.18.1-0.7.8.jar
+    checksum: 'sha256:1ccc26daee42635ac7295d4c0e5d78ba8361e203cea04d46789f73a81a397429'
 
   # Networking optimataztion mod
   - url: https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.6/krypton-0.1.6.jar
@@ -62,12 +65,7 @@ minecraft_fabric_mods:
     name: mods-command-mc1.18-1.0.5.jar
     checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
 
-    # Voice chat
-    # - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.1-2.2.21/voicechat-fabric-1.18.1-2.2.21.jar
-    #   name: voicechat-fabric-1.18.1-2.2.21.jar
-    #   checksum: 'sha256:30312d2fcf2ce3a230b05c571b39c022320ef9f9456bfd80b73889bd640f7ff8'
-
-    # Discord bridge
-    # - url: https://cdn.modrinth.com/data/FCmig1C9/versions/0.10.7/Fabric-Discord-Link-0.10.7.jar
-    #   name: Fabric-Discord-Link-0.10.7.jar
-    #   checksum: 'sha256:920bfd43be9b9773df5575068f3b5147533f8be0c05eb8196879c0f038604944'
+  # Voice chat
+  - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.1-2.2.21/voicechat-fabric-1.18.1-2.2.21.jar
+    name: voicechat-fabric-1.18.1-2.2.21.jar
+    checksum: 'sha256:30312d2fcf2ce3a230b05c571b39c022320ef9f9456bfd80b73889bd640f7ff8'
