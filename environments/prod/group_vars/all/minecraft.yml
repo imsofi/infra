@@ -13,19 +13,19 @@ minecraft_prop_enforce_whitelist: "true"
 minecraft_min_ram: 3G
 minecraft_max_ram: 3G
 
-minecraft_fabric_version: 1.18.1
-minecraft_fabric_loader_version: 0.13.3
-minecraft_fabric_installer_version: 0.10.2
-minecraft_fabric_checksum: 'sha256:45bcd16bf11c1d2ae9d38601aa6049f3772abaf48ab5a16eb53726e026b4e5e1'
-
 minecraft_mod_voicechat_enable: true
 minecraft_mod_voicechat_port: "24454"
 
+minecraft_fabric_version: 1.18.2
+minecraft_fabric_loader_version: 0.13.3
+minecraft_fabric_installer_version: 0.10.2
+minecraft_fabric_checksum: 'sha256:3c4cd6ba235d3dc9602ed60923bd75749ca7e48e58cc7f6c1f58fc07d64b3291'
+
 minecraft_fabric_mods:
   # Good to have
-  - url: https://github.com/FabricMC/fabric/releases/download/0.46.4%2B1.18/fabric-api-0.46.4+1.18.jar
-    name: fabric-api-0.46.4+1.18.jar
-    checksum: 'sha256:bbc1ac58aabdc735208a2654857e838312aa87ee3e94178cc7790b382c8355a3'
+  - url: https://github.com/FabricMC/fabric/releases/download/0.48.0%2B1.18.2/fabric-api-0.48.0+1.18.2.jar
+    name: fabric-api-0.48.0+1.18.2.jar
+    checksum: 'sha256:1e0dd98d2967637b78b5bf1e76535ef1ae82f1b38bde5927b9ed047fe4fc8779'
 
   # Requirement for ledger
   - url: https://cdn.modrinth.com/data/Ha28R6CL/versions/1.7.1+kotlin.1.6.10/fabric-language-kotlin-1.7.1+kotlin.1.6.10.jar
@@ -33,29 +33,29 @@ minecraft_fabric_mods:
     checksum: 'sha256:dcd826b83110b9901e3ed8d1ed87a9f4506222038e5ad39ccd1ed349fde34f86'
 
   # Server side logging mod
-  - url: https://cdn.modrinth.com/data/LVN9ygNV/versions/1.2.2/ledger-1.2.2.jar
-    name: ledger-1.2.2.jar
-    checksum: 'sha256:ce2f3fa53a42b81f4c4f2bb0a7ef70a7fbfe7ea9c6cd73feb7c5f39310da8891'
+  - url: https://cdn.modrinth.com/data/LVN9ygNV/versions/1.2.4/ledger-1.2.4.jar
+    name: ledger-1.2.4.jar
+    checksum: 'sha256:21feba25620c3a1c6856409a2573d32c4a9d1407c51d3731cad4d68b131190d9'
 
   # Server optimataztion mod
-  - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.8/lithium-fabric-mc1.18.1-0.7.8.jar
-    name: lithium-fabric-mc1.18.1-0.7.8.jar
-    checksum: 'sha256:1ccc26daee42635ac7295d4c0e5d78ba8361e203cea04d46789f73a81a397429'
+  - url: https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.2-0.7.9/lithium-fabric-mc1.18.2-0.7.9.jar
+    name: lithium-fabric-mc1.18.2-0.7.9.jar
+    checksum: 'sha256:19d57b83fdd88593a219211a6e6936bd8dd90957fd19e5681ffa856fe365bf58'
 
   # Networking optimataztion mod
-  - url: https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.6/krypton-0.1.6.jar
-    name: krypton-0.1.6.jar
-    checksum: 'sha256:d1c2b12483115279abb1d460d22cb7eefc7f279a3776fa6d735957c2f9da2be6'
+  - url: https://cdn.modrinth.com/data/fQEb0iXm/versions/0.1.9/krypton-0.1.9.jar
+    name: krypton-0.1.9.jar
+    checksum: 'sha256:b2366bd5c95a1c43e1b455808a1a037ccb9e97d4495bf66da2b4e9da763fb17e'
 
   # Lighting optimataztion mod
-  - url: https://cdn.modrinth.com/data/H8CaAYZC/versions/Starlight%201.0.0%201.18.x/starlight-1.0.0+fabric.d0a3220.jar
-    name: starlight-1.0.0+fabric.d0a3220.jar
-    checksum: 'sha256:41d167be9479556351bf187587cfc2e5015db38053d153bab1884158488d692f'
+  - url: https://cdn.modrinth.com/data/H8CaAYZC/versions/1.0.2+1.18.2/starlight-1.0.2+fabric.89b8d9f.jar
+    name: starlight-1.0.2+fabric.89b8d9f.jar
+    checksum: 'sha256:d8a8cfdd61502f5355581be72751ee35215418cc53de23a02071ee1ee295372d'
 
   # Performance profiling
-  - url: https://cdn.modrinth.com/data/l6YH9Als/versions/1.8.6-fabric/spark-1.8.6-fabric.jar
-    name: spark-1.8.6-fabric.jar
-    checksum: 'sha256:046965da7d54e132094f1d32d01ca994ee1ca8b858213435b85c6aef09f70ca3'
+  - url: https://cdn.modrinth.com/data/l6YH9Als/versions/1.8.14-fabric/spark-1.8.14-fabric.jar
+    name: spark-1.8.14-fabric.jar
+    checksum: 'sha256:dc1dd9c70a4cdec0ce8b9df41fd71c6d3046c2a870d234bb424b11a0ad0a1f78'
 
   # View and manipulate inventories
   - url: https://cdn.modrinth.com/data/jrDKjZP7/versions/1.4.8/InvView-1.4.8-1.18+.jar
@@ -63,14 +63,14 @@ minecraft_fabric_mods:
     checksum: 'sha256:518d187c50c064564360dd2718f596940d9fa541838bd6dad78539e490c3f7b4'
 
   # Add /mods command
-  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.5+1.18/mods-command-mc1.18-1.0.5.jar
-    name: mods-command-mc1.18-1.0.5.jar
-    checksum: 'sha256:720893557d9e11902a81e3cadae98126a38b65397a7a7bf2b5c3b232f0e1428b'
+  - url: https://cdn.modrinth.com/data/PExmWQV8/versions/1.0.6/mods-command-mc1.18.2-1.0.6.jar
+    name: mods-command-mc1.18.2-1.0.6.jar
+    checksum: 'sha256:c272a0d3e1818686bcc3dd711ec2662c0d3cc38db508e10a7195be065a7d1a76'
 
   # Voice chat
-  - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.1-2.2.21/voicechat-fabric-1.18.1-2.2.21.jar
-    name: voicechat-fabric-1.18.1-2.2.21.jar
-    checksum: 'sha256:30312d2fcf2ce3a230b05c571b39c022320ef9f9456bfd80b73889bd640f7ff8'
+  - url: https://cdn.modrinth.com/data/9eGKb6K1/versions/fabric-1.18.2-2.2.27/voicechat-fabric-1.18.2-2.2.27.jar
+    name: voicechat-fabric-1.18.2-2.2.27.jar
+    checksum: 'sha256:5820cf5ca0f01ca94127b15b51ab2673e532eda58ca13c4469d329f94680290d'
 
   # Discord bridge
   - url: https://cdn.modrinth.com/data/FCmig1C9/versions/0.10.7/Fabric-Discord-Link-0.10.7.jar
