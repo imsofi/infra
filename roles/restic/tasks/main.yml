@@ -23,7 +23,7 @@
     - role::restic
 
 - name: Extract the downloaded bz2 file
-  shell: 
+  shell:
     cmd: bzcat /tmp/autorestic.bz2 > /usr/local/bin/autorestic
     creates: /usr/local/bin/autorestic
   when: not statresult.stat.exists

@@ -14,7 +14,6 @@ minecraft_max_ram: 1G
 minecraft_mod_voicechat_enable: true
 minecraft_mod_voicechat_port: "24455"
 
- 
 minecraft_fabric_version: 1.18.2
 minecraft_fabric_loader_version: 0.13.3
 minecraft_fabric_installer_version: 0.10.2

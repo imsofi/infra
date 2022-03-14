@@ -19,7 +19,7 @@
     group: "{{ minecraft_group }}"
     state: directory
     mode: "0755"
-  when: minecraft_mod_voicechat_enable == true
+  when: minecraft_mod_voicechat_enable
 
 - name: Ensure voicechat-server.properties is set correctly
   template:
@@ -30,4 +30,4 @@
     mode: "0644"
   notify:
     - restart minecraft
-  when: minecraft_mod_voicechat_enable == true
+  when: minecraft_mod_voicechat_enable
