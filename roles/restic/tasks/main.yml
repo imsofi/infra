@@ -9,41 +9,14 @@
 - name: Ensure autorestic is installed
   stat:
     path: /usr/local/bin/autorestic
-  register: statresult
+    checksum_algorithm: sha256
+    get_checksum: true
+  register: autorestic_stat
   tags:
     - role::restic
 
-- name: Download autorestic bz2 file
-  get_url:
-    url: https://github.com/cupcakearmy/autorestic/releases/download/v1.5.5/autorestic_1.5.5_linux_amd64.bz2
-    dest: /tmp/autorestic.bz2
-    checksum: 'sha256:d83c3e54e5094e60a67fcf74fa34f9e82647191ddd5234d26b288145a7cc5788'
-  when: not statresult.stat.exists
-  tags:
-    - role::restic
-
-- name: Extract the downloaded bz2 file
-  shell:
-    cmd: bzcat /tmp/autorestic.bz2 > /usr/local/bin/autorestic
-    creates: /usr/local/bin/autorestic
-  when: not statresult.stat.exists
-  tags:
-    - role::restic
-
-- name: Ensure autorestic is executable
-  file:
-    path: /usr/local/bin/autorestic
-    owner: root
-    group: root
-    mode: '0755'
-  when: not statresult.stat.exists
-  tags:
-    - role::restic
-
-- name: Clean up bz2 file from download phase
-  file:
-    path: /tmp/autorestic.bz2
-    state: absent
-  when: not statresult.stat.exists
+- name: Install autorestic
+  include_tasks: setup.yml
+  when: not autorestic_stat.stat.exists or not autorestic_stat.stat.checksum == '5e560bb15afa317707d919dde076ac433887124c38c777a0c4fd66492293f426'
   tags:
     - role::restic

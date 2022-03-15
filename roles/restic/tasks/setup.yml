@@ -1,0 +1,22 @@
+---
+- name: Download autorestic bz2 file
+  get_url:
+    url: https://github.com/cupcakearmy/autorestic/releases/download/v1.5.7/autorestic_1.5.7_linux_amd64.bz2
+    dest: /tmp/autorestic.bz2
+    checksum: 'sha256:53eb98b701452db5c74bdb941e6e3ae0b07ce8ace4d0c974432278b4b5b53ec3'
+  tags:
+    - role::restic
+
+- name: Extract the downloaded bz2 file
+  shell: bzcat /tmp/autorestic.bz2 > /usr/local/bin/autorestic
+  tags:
+    - role::restic
+
+- name: Ensure autorestic is executable
+  file:
+    path: /usr/local/bin/autorestic
+    owner: root
+    group: root
+    mode: '0755'
+  tags:
+    - role::restic
